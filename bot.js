@@ -19,12 +19,12 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 
-const GUILD_ID = '1416744205593743430';
-const BUTTON_CHANNEL_ID = '1416754312297709731';
-const LIVE_LIST_CHANNEL_ID = '1416754075193704489';
-const JAILBREAK_GAME_ID = '606849621';
-const MODERATOR_ID = '918945040666091520';
-const DATA_FILE = 'data.json';
+const GUILD_ID = 'your guild';
+const BUTTON_CHANNEL_ID = 'channelID';
+const LIVE_LIST_CHANNEL_ID = 'channelID';
+const JAILBREAK_GAME_ID = '606849621'; /*Wouldnt recommend changing unless your changing the whole game */
+const MODERATOR_ID = 'UserID'; /*This is for the commands appeal/reject/delete links */
+const DATA_FILE = 'data.json'; /*Made by Fav_Nonchalant*/
 
 let liveListMessage = null;
 let buttonMessage = null;
@@ -455,5 +455,5 @@ async function updateLiveList() {
     console.error('[updateLiveList] error:', err);
   }
 }
-
+// Make sure in your .env its called TOKEN=
 client.login(process.env.TOKEN);
